@@ -53,15 +53,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-secondary-foreground/80">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>+234 XXX XXX XXXX</span>
+                <span>+254 712 345 678</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-secondary-foreground/80">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>info@trackmykid.com</span>
+                <span>info@trackmykid.co.ke</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-secondary-foreground/80">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Lagos, Nigeria</span>
+                <span>Equity Plaza, 3rd Floor, Ngara, Nairobi</span>
               </li>
             </ul>
           </div>
@@ -112,9 +112,15 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-secondary-foreground/10">
-          <p className="text-center text-sm text-secondary-foreground/60">
-            © {new Date().getFullYear()} TrackMyKid. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-center text-sm text-secondary-foreground/60">
+              © {new Date().getFullYear()} TrackMyKid, Powered by Jendie Automobiles Ltd. All Rights Reserved.
+            </p>
+            <div className="flex gap-4 text-sm text-secondary-foreground/60">
+              <Link to="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
+              <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

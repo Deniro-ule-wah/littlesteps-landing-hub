@@ -21,11 +21,18 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <div className="flex flex-col">
-              <span className="text-xl font-heading font-bold text-secondary">TrackMyKid</span>
-              <span className="text-xs text-muted-foreground font-medium">Littlesteps in Motion</span>
+          {/* Dual Logos and Tagline */}
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <div className="flex items-center gap-2">
+              <div className="flex flex-col items-center">
+                <span className="text-xl font-heading font-bold text-trust-blue">TrackMyKid</span>
+                <span className="text-[10px] text-muted-foreground font-medium">Littlesteps in Motion</span>
+              </div>
+              <div className="h-8 w-px bg-border mx-2 hidden sm:block" />
+              <div className="flex flex-col items-center hidden sm:flex">
+                <span className="text-xs font-semibold text-trust-blue">Powered by</span>
+                <span className="text-sm font-heading font-bold text-mustard">Jendie Automobiles</span>
+              </div>
             </div>
           </Link>
 

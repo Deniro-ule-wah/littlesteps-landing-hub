@@ -112,7 +112,7 @@ const Contact = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+234 XXX XXX XXXX"
+                        placeholder="+254 712 345 678"
                         className="rounded-xl"
                       />
                     </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                          <p className="text-muted-foreground">+234 XXX XXX XXXX</p>
+                          <p className="text-muted-foreground">+254 712 345 678</p>
                         </div>
                       </div>
 
@@ -170,8 +170,7 @@ const Contact = () => {
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                          <p className="text-muted-foreground">info@trackmykid.com</p>
-                          <p className="text-muted-foreground">support@trackmykid.com</p>
+                          <p className="text-muted-foreground">info@trackmykid.co.ke</p>
                         </div>
                       </div>
 
@@ -182,8 +181,9 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">Office</h3>
                           <p className="text-muted-foreground">
-                            Jendie Automobiles Ltd.<br />
-                            Lagos, Nigeria
+                            TrackMyKid by Jendie Automobiles Ltd.<br />
+                            Equity Plaza, 3rd Floor<br />
+                            Ngara, Nairobi, Kenya
                           </p>
                         </div>
                       </div>
@@ -255,7 +255,7 @@ const Contact = () => {
                       <div className="text-center space-y-2">
                         <MapPin className="h-12 w-12 text-muted-foreground mx-auto" />
                         <p className="text-muted-foreground">Map Location</p>
-                        <p className="text-sm text-muted-foreground">Lagos, Nigeria</p>
+                        <p className="text-sm text-muted-foreground">Equity Plaza, Ngara, Nairobi</p>
                       </div>
                     </div>
                   </CardContent>
