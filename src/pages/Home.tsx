@@ -91,8 +91,14 @@ const Home = () => {
                 Empowering parents with peace of mind. Kenya's leading parental trust and safety brand ensuring transparency in school transport.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button asChild variant="hero" size="xl">
-                  <Link to="/auth">Track My Child</Link>
+                <Button 
+                  variant="hero" 
+                  size="xl"
+                  onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
+                  aria-label="Login to Portal"
+                  className="transition-all hover:scale-105"
+                >
+                  Track My Child
                 </Button>
                 <Button 
                   asChild 
@@ -194,8 +200,14 @@ const Home = () => {
           <p className="text-lg text-secondary-foreground/90 max-w-2xl mx-auto">
             Join thousands of parents who trust TrackMyKid for safe, transparent school transport
           </p>
-          <Button asChild variant="hero" size="xl">
-            <Link to="/auth">Get Started Today</Link>
+          <Button 
+            variant="hero" 
+            size="xl"
+            onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
+            aria-label="Login to Portal"
+            className="transition-all hover:scale-105"
+          >
+            Get Started Today
           </Button>
         </div>
       </section>

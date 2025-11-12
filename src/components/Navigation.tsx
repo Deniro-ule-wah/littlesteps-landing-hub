@@ -56,8 +56,14 @@ const Navigation = () => {
 
           {/* Login Button */}
           <div className="hidden md:block">
-            <Button asChild variant="trustButton" size="default">
-              <Link to="/auth">Login</Link>
+            <Button 
+              variant="trustButton" 
+              size="default"
+              onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
+              aria-label="Login to Portal"
+              className="transition-all hover:scale-105"
+            >
+              Login
             </Button>
           </div>
 
@@ -89,8 +95,17 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild variant="trustButton" size="default" className="w-full">
-              <Link to="/auth" onClick={() => setIsOpen(false)}>Login</Link>
+            <Button 
+              variant="trustButton" 
+              size="default" 
+              className="w-full transition-all hover:scale-105"
+              onClick={() => {
+                setIsOpen(false);
+                window.location.href = 'https://trackmykid-webapp.vercel.app/';
+              }}
+              aria-label="Login to Portal"
+            >
+              Login
             </Button>
           </div>
         )}
