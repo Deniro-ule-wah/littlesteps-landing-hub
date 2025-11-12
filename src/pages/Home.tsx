@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import { MapPin, Bell, Shield, Lock, Eye, Users, CheckCircle, UserPlus, LogIn, Smartphone, BusFront } from "lucide-react";
 import heroImage from "@/assets/hero-school-bus.jpg";
 import nairobiSkyline from "@/assets/nairobi-skyline.jpg";
+import schoolBusRoad from "@/assets/school-bus-road.jpg";
+import kenyanChildren from "@/assets/kenyan-school-children.jpg";
+import childrenBoarding from "@/assets/children-boarding-bus.jpg";
 
 const Home = () => {
   const features = [
@@ -117,8 +120,8 @@ const Home = () => {
             
             <div className="relative animate-float">
               <img 
-                src={heroImage} 
-                alt="Happy children in school bus with GPS tracking" 
+                src={schoolBusRoad} 
+                alt="School bus on Kenyan road with safety tracking" 
                 className="rounded-3xl shadow-2xl w-full"
               />
               <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl">
@@ -251,37 +254,83 @@ const Home = () => {
               Affordable safety for every family in Kenya
             </p>
           </div>
+
+          {/* Brand Philosophy */}
+          <div className="max-w-4xl mx-auto mb-12 text-center">
+            <div className="bg-gradient-to-r from-secondary/10 via-trust-blue/10 to-mustard/10 rounded-2xl p-8 border-2 border-primary/10">
+              <p className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-2">
+                We Move with <span className="text-secondary">PURPOSE</span>. We Protect with <span className="text-trust-blue">PRIDE</span>. We Serve with <span className="text-mustard">HEART</span>.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                Every child's journey should be seen, safe, and celebrated
+              </p>
+            </div>
+          </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Installation Fee */}
             <Card className="border-2 border-trust-blue hover:shadow-xl transition-all duration-300 hover-lift">
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 space-y-4">
                 <div className="text-center">
-                  <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                     Installation
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">One-time setup fee</p>
+                  <p className="text-xs text-muted-foreground mb-3">One-time setup</p>
                   <div className="space-y-1">
-                    <p className="text-5xl font-bold text-trust-blue">KES 16,000</p>
-                    <p className="text-sm text-muted-foreground">per vehicle</p>
+                    <p className="text-4xl font-bold text-trust-blue">16,000</p>
+                    <p className="text-xs text-muted-foreground">KES per vehicle</p>
                   </div>
                 </div>
-                <div className="space-y-3 pt-4 border-t">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">GPS tracker device installation</span>
+                <div className="space-y-2 pt-3 border-t">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">GPS tracker installation</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">System setup & configuration</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">System configuration</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Driver training included</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Driver training</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Lifetime device warranty</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Device warranty</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Annual Renewal Fee */}
+            <Card className="border-2 border-primary hover:shadow-xl transition-all duration-300 hover-lift">
+              <CardContent className="p-6 space-y-4">
+                <div className="text-center">
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-2">
+                    Renewal
+                  </h3>
+                  <p className="text-xs text-muted-foreground mb-3">Annual device fee</p>
+                  <div className="space-y-1">
+                    <p className="text-4xl font-bold text-primary">4,000</p>
+                    <p className="text-xs text-muted-foreground">KES per year</p>
+                  </div>
+                </div>
+                <div className="space-y-2 pt-3 border-t">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Device maintenance</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Platform updates</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Technical support</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">System reliability</span>
                   </div>
                 </div>
               </CardContent>
@@ -289,40 +338,40 @@ const Home = () => {
 
             {/* Per Term */}
             <Card className="border-2 border-mustard hover:shadow-xl transition-all duration-300 hover-lift relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-mustard text-white px-4 py-1 text-xs font-semibold rounded-bl-lg">
+              <div className="absolute top-0 right-0 bg-mustard text-white px-3 py-1 text-xs font-semibold rounded-bl-lg">
                 MOST POPULAR
               </div>
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 space-y-4">
                 <div className="text-center">
-                  <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                     Per Term
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">Pay per school term</p>
+                  <p className="text-xs text-muted-foreground mb-3">Per school term</p>
                   <div className="space-y-1">
-                    <p className="text-5xl font-bold text-mustard">KES 3,000</p>
-                    <p className="text-sm text-muted-foreground">per child / term</p>
+                    <p className="text-4xl font-bold text-mustard">3,000</p>
+                    <p className="text-xs text-muted-foreground">KES per child</p>
                   </div>
                 </div>
-                <div className="space-y-3 pt-4 border-t">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Real-time GPS tracking</span>
+                <div className="space-y-2 pt-3 border-t">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Live GPS tracking</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Instant pickup/drop-off alerts</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Instant alerts</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Emergency panic button</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Panic button</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">24/7 customer support</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">24/7 support</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Pay as you go flexibility</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Flexible payments</span>
                   </div>
                 </div>
               </CardContent>
@@ -330,43 +379,43 @@ const Home = () => {
 
             {/* Annual Plan */}
             <Card className="border-2 border-secondary hover:shadow-xl transition-all duration-300 hover-lift relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-secondary text-white px-4 py-1 text-xs font-semibold rounded-bl-lg">
+              <div className="absolute top-0 right-0 bg-secondary text-white px-3 py-1 text-xs font-semibold rounded-bl-lg">
                 SAVE 25%
               </div>
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 space-y-4">
                 <div className="text-center">
-                  <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
+                  <h3 className="text-xl font-heading font-bold text-foreground mb-2">
                     Annual
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4">Best value - full year</p>
+                  <p className="text-xs text-muted-foreground mb-3">Full year value</p>
                   <div className="space-y-1">
-                    <p className="text-5xl font-bold text-secondary">KES 9,000</p>
-                    <p className="text-sm text-muted-foreground">per child / year</p>
+                    <p className="text-4xl font-bold text-secondary">9,000</p>
+                    <p className="text-xs text-muted-foreground">KES per child</p>
                   </div>
                   <p className="text-xs text-secondary font-semibold mt-2">
-                    Save KES 3,000 annually!
+                    Save 3,000 KES!
                   </p>
                 </div>
-                <div className="space-y-3 pt-4 border-t">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Everything in Per Term plan</span>
+                <div className="space-y-2 pt-3 border-t">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">All term features</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Priority customer support</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Priority support</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Advanced analytics dashboard</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Advanced analytics</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">Free system upgrades</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">Free upgrades</span>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">25% savings over term plans</span>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                    <span className="text-xs text-muted-foreground">25% savings</span>
                   </div>
                 </div>
               </CardContent>
@@ -395,11 +444,39 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 space-y-4">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-              Trusted by Schools & Parents
+              Trusted by Schools & Parents Across Kenya
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               See what our community has to say about TrackMyKid
             </p>
+          </div>
+
+          {/* Images Section */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl hover-lift">
+              <img 
+                src={kenyanChildren} 
+                alt="Happy Kenyan school children in uniforms" 
+                className="w-full h-[300px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <p className="text-white font-heading font-semibold text-xl">
+                  Serving Students from Leading Kenyan Schools
+                </p>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl hover-lift">
+              <img 
+                src={childrenBoarding} 
+                alt="Children boarding school bus safely" 
+                className="w-full h-[300px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <p className="text-white font-heading font-semibold text-xl">
+                  Safe Onboarding & Offboarding Every Day
+                </p>
+              </div>
+            </div>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
