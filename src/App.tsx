@@ -2,12 +2,11 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Philosophy from "./pages/Philosophy";
 import Contact from "./pages/Contact";
-import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,18 +23,6 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/philosophy" element={<Philosophy />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/auth" element={<Auth />} />
-
-          {/* Redirect Manifest Portal route to external Vercel link */}
-          <Route
-            path="/manifest-portal"
-            element={
-              <Navigate
-                to="https://trackmykid-webapp.vercel.app/"
-                replace
-              />
-            }
-          />
 
           {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
