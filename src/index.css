@@ -43,6 +43,8 @@ All colors MUST be HSL.
     --mustard-foreground: 0 0% 10%;
     --trust-blue: 208 91% 40%;
     --trust-blue-foreground: 0 0% 100%;
+    --orange: 22 100% 53%;
+    --orange-foreground: 0 0% 100%;
     --soft-bg: 210 25% 98%;
     
     /* Gradients */

@@ -1,9 +1,22 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Lock, Scale, Users, Shield, Baby } from "lucide-react";
+import schoolBusRoad from "@/assets/school-bus-road.jpg";
+import kenyanChildren from "@/assets/kenyan-school-children.jpg";
+import childrenBoarding from "@/assets/children-boarding-bus.jpg";
+import heroImage from "@/assets/hero-school-bus.jpg";
 
 const Philosophy = () => {
+  const carouselSlides = [
+    { image: schoolBusRoad, caption: "Every Step Safe" },
+    { image: kenyanChildren, caption: "LittleSteps in Motion" },
+    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
+    { image: heroImage, caption: "Visibility for Every Journey" },
+  ];
+
   const ethicalGuidelines = [
     { icon: Heart, title: "Trustworthiness", description: "We honor commitments and build lasting relationships with integrity." },
     { icon: Lock, title: "Data Privacy", description: "Your family's information is protected with bank-grade security." },
@@ -26,7 +39,7 @@ const Philosophy = () => {
       
       <main className="flex-1 pt-16">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-soft-bg to-secondary/5">
+        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-soft-bg to-trust-blue/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground">
@@ -39,13 +52,22 @@ const Philosophy = () => {
           </div>
         </section>
 
+        {/* Image Carousel Section */}
+        <section className="py-16 md:py-20 bg-soft-bg">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <ImageCarousel slides={carouselSlides} />
+            </div>
+          </div>
+        </section>
+
         {/* Vision & Mission Recap */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
-              <Card className="border-2 border-secondary">
+              <Card className="border-2 border-trust-blue rounded-2xl">
                 <CardContent className="p-8 space-y-4">
-                  <h2 className="text-2xl font-heading font-bold text-secondary">Vision</h2>
+                  <h2 className="text-2xl font-heading font-bold text-trust-blue">Vision</h2>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     To ensure the safety of every child by providing complete visibility for school transport, 
                     becoming the most trusted digital companion for educational institutions globally.
@@ -53,9 +75,9 @@ const Philosophy = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary">
+              <Card className="border-2 border-mustard rounded-2xl">
                 <CardContent className="p-8 space-y-4">
-                  <h2 className="text-2xl font-heading font-bold text-secondary">Mission</h2>
+                  <h2 className="text-2xl font-heading font-bold text-mustard">Mission</h2>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     To empower schools, parents, and transport providers with real-time visibility, intuitive tools, 
                     and a care-centered culture that eliminates uncertainty and builds lasting trust.
@@ -70,24 +92,26 @@ const Philosophy = () => {
         <section className="py-16 md:py-20 bg-soft-bg">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="border-2 border-primary shadow-xl bg-gradient-to-br from-card to-primary/5">
+              <Card className="border-2 border-orange shadow-xl bg-gradient-to-br from-card to-orange/5 rounded-2xl">
                 <CardContent className="p-10 space-y-6">
                   <h2 className="text-3xl font-heading font-bold text-center text-foreground">Our Creed</h2>
-                  <div className="text-center space-y-4">
-                    <p className="text-2xl font-heading font-semibold text-secondary italic">
-                      "We move with purpose,<br />
-                      protect with pride,<br />
-                      serve with heart."
+                  <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+                    <p className="text-center font-semibold text-xl text-foreground">
+                      We Move with <span className="text-trust-blue">PURPOSE</span>. 
+                      We Protect with <span className="text-orange">PRIDE</span>. 
+                      We Serve with <span className="text-mustard">HEART</span>.
                     </p>
-                  </div>
-                  <div className="pt-6 space-y-4 text-muted-foreground leading-relaxed">
-                    <p className="text-lg">
-                      Every journey we track represents a promise to a parent, a commitment to a child, 
-                      and a responsibility to our community.
+                    <p>
+                      <strong className="text-foreground">We believe</strong> every child deserves a safe journey. 
+                      Every parent deserves peace of mind. Every school deserves a transparent, efficient transport solution.
                     </p>
-                    <p className="text-lg">
-                      We believe that technology should serve humanity with empathy, that safety should never 
-                      be compromised, and that trust is earned through consistent, transparent action.
+                    <p>
+                      <strong className="text-foreground">We promise</strong> to be the digital guardian for children on the move—
+                      providing visibility without intrusion, technology without complexity, and safety without compromise.
+                    </p>
+                    <p>
+                      <strong className="text-foreground">We commit</strong> to listening, learning, and evolving alongside the 
+                      communities we serve. Because trust isn't given—it's earned, one journey at a time.
                     </p>
                   </div>
                 </CardContent>
@@ -99,31 +123,32 @@ const Philosophy = () => {
         {/* Ethical Guidelines */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                Ethical Guidelines
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                The moral compass that guides our operations
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {ethicalGuidelines.map((guideline, index) => (
-                <Card key={index} className="border-2 hover:border-secondary hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6 space-y-4 text-center">
-                    <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mx-auto">
-                      <guideline.icon className="h-6 w-6 text-secondary" />
-                    </div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">
-                      {guideline.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {guideline.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                  Ethical Guidelines
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  The moral compass guiding our daily operations
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                {ethicalGuidelines.map((guideline, index) => {
+                  const Icon = guideline.icon;
+                  return (
+                    <Card key={index} className="border-2 hover:border-orange hover:shadow-lg transition-all duration-300 hover-lift rounded-2xl">
+                      <CardContent className="p-6 space-y-4">
+                        <div className="w-12 h-12 rounded-full bg-orange/10 flex items-center justify-center">
+                          <Icon className="h-6 w-6 text-orange" />
+                        </div>
+                        <h3 className="text-xl font-heading font-bold text-foreground">{guideline.title}</h3>
+                        <p className="text-muted-foreground">{guideline.description}</p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
@@ -131,76 +156,48 @@ const Philosophy = () => {
         {/* Cultural Aspects */}
         <section className="py-16 md:py-20 bg-soft-bg">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                Our Culture
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                How we work together to achieve our mission
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {culturalAspects.map((aspect, index) => (
-                <Card key={index} className="border-2 hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6 space-y-3">
-                    <h3 className="text-xl font-heading font-semibold text-secondary">
-                      {aspect.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {aspect.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                  Our Culture
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  How we work together to achieve our mission
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                {culturalAspects.map((aspect, index) => (
+                  <Card key={index} className="border-2 hover:border-trust-blue hover:shadow-lg transition-all duration-300 rounded-2xl">
+                    <CardContent className="p-6 space-y-2">
+                      <h3 className="text-lg font-heading font-bold text-foreground">{aspect.title}</h3>
+                      <p className="text-muted-foreground">{aspect.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Stakeholder Engagement */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-secondary to-trust-blue text-secondary-foreground">
+        {/* Closing Statement */}
+        <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-8">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-center">
-                Stakeholder Engagement
+            <div className="max-w-4xl mx-auto text-center space-y-6">
+              <h2 className="text-3xl font-heading font-bold text-foreground">
+                A Philosophy in Action
               </h2>
-              
-              <div className="grid md:grid-cols-3 gap-6">
-                <Card className="bg-card text-card-foreground border-0">
-                  <CardContent className="p-6 space-y-3">
-                    <h3 className="text-xl font-heading font-semibold text-secondary">Parents</h3>
-                    <p className="text-sm text-muted-foreground">
-                      We prioritize parent feedback and provide complete visibility into their child's journey 
-                      for ultimate peace of mind.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-card text-card-foreground border-0">
-                  <CardContent className="p-6 space-y-3">
-                    <h3 className="text-xl font-heading font-semibold text-secondary">Schools</h3>
-                    <p className="text-sm text-muted-foreground">
-                      We support educational institutions with transparent communication tools and efficient 
-                      transport management systems.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-card text-card-foreground border-0">
-                  <CardContent className="p-6 space-y-3">
-                    <h3 className="text-xl font-heading font-semibold text-secondary">Transport Providers</h3>
-                    <p className="text-sm text-muted-foreground">
-                      We empower drivers and coordinators with real-time tracking and communication tools for 
-                      seamless operations.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our philosophy isn't just words on a page—it's the foundation of every feature we build, 
+                every conversation we have, and every decision we make. It's what makes TrackMyKid more than 
+                a tracking platform. It's what makes us a trusted partner in child safety.
+              </p>
             </div>
           </div>
         </section>
       </main>
 
+      <ChatbotWidget />
       <Footer />
     </div>
   );

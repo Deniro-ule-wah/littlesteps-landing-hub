@@ -1,9 +1,22 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Heart, Shield, Lightbulb, Users } from "lucide-react";
+import schoolBusRoad from "@/assets/school-bus-road.jpg";
+import kenyanChildren from "@/assets/kenyan-school-children.jpg";
+import childrenBoarding from "@/assets/children-boarding-bus.jpg";
+import heroImage from "@/assets/hero-school-bus.jpg";
 
 const About = () => {
+  const carouselSlides = [
+    { image: schoolBusRoad, caption: "Every Step Safe" },
+    { image: kenyanChildren, caption: "LittleSteps in Motion" },
+    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
+    { image: heroImage, caption: "Visibility for Every Journey" },
+  ];
+
   const values = [
     { icon: Shield, title: "Integrity", description: "We operate with honesty and transparency in every interaction." },
     { icon: Lightbulb, title: "Innovation", description: "We continuously improve our technology to serve families better." },
@@ -33,15 +46,24 @@ const About = () => {
           </div>
         </section>
 
+        {/* Image Carousel Section */}
+        <section className="py-16 md:py-20 bg-soft-bg">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <ImageCarousel slides={carouselSlides} />
+            </div>
+          </div>
+        </section>
+
         {/* Company Overview */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto space-y-8">
-              <Card className="border-2">
+              <Card className="border-2 rounded-2xl">
                 <CardContent className="p-8 space-y-6">
                   <h2 className="text-3xl font-heading font-bold text-foreground">Who We Are</h2>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    TrackMyKid, powered by <span className="text-secondary font-semibold">Jendie Automobiles Ltd.</span>, 
+                    TrackMyKid, powered by <span className="text-trust-blue font-semibold">Jendie Automobiles Ltd.</span>, 
                     is a cutting-edge school transport tracking platform designed to bring peace of mind to parents, 
                     schools, and transport providers across Africa and beyond.
                   </p>
@@ -59,10 +81,10 @@ const About = () => {
         <section className="py-16 md:py-20 bg-soft-bg">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-              <Card className="border-2 border-secondary hover:shadow-xl transition-all duration-300">
+              <Card className="border-2 border-trust-blue hover:shadow-xl transition-all duration-300 rounded-2xl">
                 <CardContent className="p-8 space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4">
-                    <Eye className="h-6 w-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-full bg-trust-blue/10 flex items-center justify-center mb-4">
+                    <Eye className="h-6 w-6 text-trust-blue" />
                   </div>
                   <h3 className="text-2xl font-heading font-bold text-foreground">Our Vision</h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -72,15 +94,15 @@ const About = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-primary hover:shadow-xl transition-all duration-300">
+              <Card className="border-2 border-mustard hover:shadow-xl transition-all duration-300 rounded-2xl">
                 <CardContent className="p-8 space-y-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                    <Target className="h-6 w-6 text-secondary" />
+                  <div className="w-12 h-12 rounded-full bg-mustard/10 flex items-center justify-center mb-4">
+                    <Target className="h-6 w-6 text-mustard" />
                   </div>
                   <h3 className="text-2xl font-heading font-bold text-foreground">Our Mission</h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    To become the most trusted digital companion in school transport globally, empowering schools, 
-                    parents, and transport providers with real-time visibility, intuitive tools, and a care-centered culture.
+                    To empower schools, parents, and transport providers with real-time visibility, intuitive tools, 
+                    and a care-centered culture that eliminates uncertainty and builds lasting trust.
                   </p>
                 </CardContent>
               </Card>
@@ -91,55 +113,58 @@ const About = () => {
         {/* Core Values */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-                Our Core Values
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                The principles that guide everything we do
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {values.map((value, index) => (
-                <Card key={index} className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6 space-y-4 text-center">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                      <value.icon className="h-6 w-6 text-secondary" />
-                    </div>
-                    <h3 className="text-xl font-heading font-semibold text-foreground">
-                      {value.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {value.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12 space-y-4">
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                  Our Core Values
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Principles that guide everything we do
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                {values.map((value, index) => {
+                  const Icon = value.icon;
+                  return (
+                    <Card key={index} className="border-2 hover:border-orange hover:shadow-lg transition-all duration-300 hover-lift rounded-2xl">
+                      <CardContent className="p-6 space-y-4">
+                        <div className="w-12 h-12 rounded-full bg-orange/10 flex items-center justify-center">
+                          <Icon className="h-6 w-6 text-orange" />
+                        </div>
+                        <h3 className="text-xl font-heading font-bold text-foreground">{value.title}</h3>
+                        <p className="text-muted-foreground">{value.description}</p>
+                      </CardContent>
+                    </Card>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Purpose Statement */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-secondary to-trust-blue text-secondary-foreground">
+        {/* Commitment */}
+        <section className="py-16 md:py-20 bg-soft-bg">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold">Our Purpose</h2>
-              <p className="text-xl leading-relaxed">
-                We exist to empower schools, parents, and transport providers with real-time visibility, 
-                intuitive tools, and a care-centered culture. We strive to eliminate uncertainty, build trust, 
-                and make every school journey as safe as a parent's embrace.
-              </p>
-              <div className="pt-6">
-                <p className="text-lg font-medium italic">
-                  "Every child deserves to arrive safely. Every parent deserves peace of mind."
-                </p>
-              </div>
+            <div className="max-w-4xl mx-auto">
+              <Card className="border-2 border-trust-blue rounded-2xl">
+                <CardContent className="p-10 space-y-6">
+                  <h2 className="text-3xl font-heading font-bold text-center text-foreground">
+                    Our Commitment
+                  </h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed text-center">
+                    We are committed to continuous improvement, listening to our users, and 
+                    adapting our services to meet the evolving needs of families and educational 
+                    institutions across Kenya and beyond.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
       </main>
 
+      <ChatbotWidget />
       <Footer />
     </div>
   );

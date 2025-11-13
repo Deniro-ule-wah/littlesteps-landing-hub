@@ -60,6 +60,10 @@ export default {
           DEFAULT: "hsl(var(--trust-blue))",
           foreground: "hsl(var(--trust-blue-foreground))",
         },
+        orange: {
+          DEFAULT: "hsl(var(--orange))",
+          foreground: "hsl(var(--orange-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

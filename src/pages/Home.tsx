@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
+import FAQ from "@/components/FAQ";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import { MapPin, Bell, Shield, Lock, Eye, Users, CheckCircle, UserPlus, LogIn, Smartphone, BusFront } from "lucide-react";
 import heroImage from "@/assets/hero-school-bus.jpg";
 import nairobiSkyline from "@/assets/nairobi-skyline.jpg";
@@ -44,24 +47,49 @@ const Home = () => {
     },
   ];
 
+  const carouselSlides = [
+    { image: schoolBusRoad, caption: "Every Step Safe" },
+    { image: kenyanChildren, caption: "LittleSteps in Motion" },
+    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
+    { image: heroImage, caption: "Visibility for Every Journey" },
+  ];
+
   const testimonials = [
     {
-      name: "Adaeze Okonkwo",
-      role: "Parent",
-      content: "TrackMyKid gives me peace of mind. I can see exactly when my daughter arrives at school safely.",
-      school: "Green Valley Academy",
+      name: "Akinyi Odhiambo",
+      role: "Parent - Nairobi",
+      content: "Mtoto wangu yuko salama kila siku. Asante TrackMyKid!",
+      school: "Makini School",
     },
     {
-      name: "John Mensah",
-      role: "School Administrator",
-      content: "This platform has transformed our transport operations. Parents are happier, and we're more efficient.",
-      school: "Bright Future School",
+      name: "James Mwangi",
+      role: "Parent - Kiambu",
+      content: "Nimefurahia huduma hii. I can see my child's bus in real time.",
+      school: "Braeburn School",
     },
     {
-      name: "Fatima Bello",
-      role: "Transport Coordinator",
-      content: "Real-time tracking and notifications have eliminated confusion and improved our service quality.",
-      school: "Unity International",
+      name: "Hassan Abdalla",
+      role: "Parent - Mombasa",
+      content: "The alerts give me peace of mind every morning.",
+      school: "Aga Khan Academy",
+    },
+    {
+      name: "Wanjiku Kariuki",
+      role: "Teacher - Nairobi",
+      content: "As a teacher, this system brings order and safety to our school transport.",
+      school: "Brookhouse School",
+    },
+    {
+      name: "Nyambura Njeri",
+      role: "Parent - Nakuru",
+      content: "Simple to use, very clear and accurate.",
+      school: "Pembroke House",
+    },
+    {
+      name: "David Otieno",
+      role: "Transport Coordinator - Nairobi",
+      content: "Efficiency has improved dramatically since we started using TrackMyKid.",
+      school: "St. Mary's School",
     },
   ];
 
@@ -95,11 +123,10 @@ const Home = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button 
-                  variant="hero" 
                   size="xl"
                   onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
                   aria-label="Login to Portal"
-                  className="transition-all hover:scale-105"
+                  className="bg-orange hover:bg-orange/90 text-white transition-all hover:scale-105 rounded-full"
                 >
                   Track My Child
                 </Button>
@@ -107,7 +134,7 @@ const Home = () => {
                   asChild 
                   variant="outline" 
                   size="xl" 
-                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground"
+                  className="border-2 border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white rounded-full"
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -129,6 +156,23 @@ const Home = () => {
                 <p className="text-sm">Happy Families</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Carousel Section */}
+      <section className="py-16 md:py-20 bg-soft-bg">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+              Safety in <span className="text-gradient-mustard">Every Journey</span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Trusted by families and schools across Kenya
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <ImageCarousel slides={carouselSlides} />
           </div>
         </div>
       </section>
@@ -311,7 +355,7 @@ const Home = () => {
                   </h3>
                   <p className="text-xs text-muted-foreground mb-3">Annual device fee</p>
                   <div className="space-y-1">
-                    <p className="text-4xl font-bold text-primary">4,000</p>
+                    <p className="text-4xl font-bold text-trust-blue border-b-4 border-orange inline-block">7,000</p>
                     <p className="text-xs text-muted-foreground">KES per year</p>
                   </div>
                 </div>
@@ -427,11 +471,10 @@ const Home = () => {
               All plans include full access to our tracking platform with no hidden fees
             </p>
             <Button 
-              variant="hero" 
               size="xl"
               onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
               aria-label="Get Started"
-              className="transition-all hover:scale-105"
+              className="bg-orange hover:bg-orange/90 text-white transition-all hover:scale-105 rounded-full"
             >
               Get Started Today
             </Button>
@@ -479,15 +522,15 @@ const Home = () => {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-card border-2 hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="bg-card border-2 hover:shadow-lg transition-all duration-300 hover-lift">
                 <CardContent className="p-6 space-y-4">
                   <p className="text-muted-foreground italic">"{testimonial.content}"</p>
                   <div className="pt-4 border-t">
                     <p className="font-semibold text-foreground">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <p className="text-xs text-secondary font-medium mt-1">{testimonial.school}</p>
+                    <p className="text-xs text-trust-blue font-medium mt-1">{testimonial.school}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -495,6 +538,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ />
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-secondary to-trust-blue text-secondary-foreground">
@@ -506,16 +552,17 @@ const Home = () => {
             Join thousands of parents who trust TrackMyKid for safe, transparent school transport
           </p>
           <Button 
-            variant="hero" 
             size="xl"
             onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
             aria-label="Login to Portal"
-            className="transition-all hover:scale-105"
+            className="bg-mustard hover:bg-mustard/90 text-foreground transition-all hover:scale-105 rounded-full"
           >
             Get Started Today
           </Button>
         </div>
       </section>
+
+      <ChatbotWidget />
 
       <Footer />
     </div>

@@ -1,12 +1,18 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ImageCarousel from "@/components/ImageCarousel";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import schoolBusRoad from "@/assets/school-bus-road.jpg";
+import kenyanChildren from "@/assets/kenyan-school-children.jpg";
+import childrenBoarding from "@/assets/children-boarding-bus.jpg";
+import heroImage from "@/assets/hero-school-bus.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,11 +24,17 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const carouselSlides = [
+    { image: schoolBusRoad, caption: "Every Step Safe" },
+    { image: kenyanChildren, caption: "LittleSteps in Motion" },
+    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
+    { image: heroImage, caption: "Visibility for Every Journey" },
+  ];
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
@@ -60,12 +72,21 @@ const Contact = () => {
           </div>
         </section>
 
+        {/* Image Carousel Section */}
+        <section className="py-16 md:py-20 bg-soft-bg">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <ImageCarousel slides={carouselSlides} />
+            </div>
+          </div>
+        </section>
+
         {/* Contact Form & Info */}
         <section className="py-16 md:py-20 bg-background">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {/* Contact Form */}
-              <Card className="border-2">
+              <Card className="border-2 rounded-2xl">
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-heading font-bold text-foreground mb-6">
                     Send Us a Message
@@ -119,7 +140,7 @@ const Contact = () => {
 
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium text-foreground">
-                        Your Message *
+                        Message *
                       </label>
                       <Textarea
                         id="message"
@@ -127,17 +148,17 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        placeholder="Tell us how we can help you..."
-                        className="min-h-[150px] rounded-xl"
+                        placeholder="How can we help you?"
+                        rows={5}
+                        className="rounded-xl"
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
-                      variant="hero" 
-                      size="lg" 
-                      className="w-full"
+                    <Button
+                      type="submit"
                       disabled={isSubmitting}
+                      className="w-full bg-orange hover:bg-orange/90 text-white rounded-full"
+                      size="lg"
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
                     </Button>
@@ -146,117 +167,108 @@ const Contact = () => {
               </Card>
 
               {/* Contact Information */}
-              <div className="space-y-8">
-                <Card className="border-2">
-                  <CardContent className="p-8 space-y-6">
-                    <h2 className="text-2xl font-heading font-bold text-foreground">
-                      Contact Information
-                    </h2>
-                    
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Phone className="h-5 w-5 text-secondary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-1">Phone</h3>
-                          <p className="text-muted-foreground">+254 712 345 678</p>
-                        </div>
+              <div className="space-y-6">
+                <Card className="border-2 hover:border-orange transition-all duration-300 rounded-2xl">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-orange/10 flex items-center justify-center flex-shrink-0">
+                        <MapPin className="h-6 w-6 text-orange" />
                       </div>
-
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Mail className="h-5 w-5 text-secondary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                          <p className="text-muted-foreground">info@trackmykid.co.ke</p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <MapPin className="h-5 w-5 text-secondary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-1">Office</h3>
-                          <p className="text-muted-foreground">
-                            TrackMyKid by Jendie Automobiles Ltd.<br />
-                            Equity Plaza, 3rd Floor<br />
-                            Ngara, Nairobi, Kenya
-                          </p>
-                        </div>
-                      </div>
-
-                      <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                          <Clock className="h-5 w-5 text-secondary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-foreground mb-1">Business Hours</h3>
-                          <p className="text-muted-foreground">
-                            Monday - Friday: 8:00 AM - 6:00 PM<br />
-                            Saturday: 9:00 AM - 2:00 PM<br />
-                            Sunday: Closed
-                          </p>
-                        </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-foreground mb-2">Office Location</h3>
+                        <p className="text-muted-foreground">
+                          Equity Plaza, Ngara<br />
+                          Nairobi, Kenya
+                        </p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Social Media */}
-                <Card className="border-2">
-                  <CardContent className="p-8">
-                    <h3 className="text-xl font-heading font-bold text-foreground mb-4">
-                      Connect With Us
-                    </h3>
+                <Card className="border-2 hover:border-orange transition-all duration-300 rounded-2xl">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-orange/10 flex items-center justify-center flex-shrink-0">
+                        <Mail className="h-6 w-6 text-orange" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-foreground mb-2">Email</h3>
+                        <p className="text-muted-foreground">
+                          <a href="mailto:support@trackmykid.co.ke" className="hover:text-orange transition-colors">
+                            support@trackmykid.co.ke
+                          </a>
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 hover:border-orange transition-all duration-300 rounded-2xl">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-orange/10 flex items-center justify-center flex-shrink-0">
+                        <Phone className="h-6 w-6 text-orange" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-foreground mb-2">Phone</h3>
+                        <p className="text-muted-foreground">
+                          +254 712 345 678
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 hover:border-orange transition-all duration-300 rounded-2xl">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-orange/10 flex items-center justify-center flex-shrink-0">
+                        <Clock className="h-6 w-6 text-orange" />
+                      </div>
+                      <div>
+                        <h3 className="font-heading font-bold text-foreground mb-2">Business Hours</h3>
+                        <p className="text-muted-foreground">
+                          Monday - Friday: 8:00 AM - 6:00 PM EAT<br />
+                          Saturday: 9:00 AM - 2:00 PM EAT<br />
+                          Sunday: Closed
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-2 border-trust-blue rounded-2xl">
+                  <CardContent className="p-6">
+                    <h3 className="font-heading font-bold text-foreground mb-4">Connect With Us</h3>
                     <div className="flex gap-4">
                       <a
-                        href="https://facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                        href="#"
+                        className="w-10 h-10 rounded-full bg-trust-blue/10 hover:bg-trust-blue hover:text-white flex items-center justify-center text-trust-blue transition-all duration-300"
+                        aria-label="Facebook"
                       >
                         <Facebook className="h-5 w-5" />
                       </a>
                       <a
-                        href="https://linkedin.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                      >
-                        <Linkedin className="h-5 w-5" />
-                      </a>
-                      <a
-                        href="https://twitter.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                        href="#"
+                        className="w-10 h-10 rounded-full bg-trust-blue/10 hover:bg-trust-blue hover:text-white flex items-center justify-center text-trust-blue transition-all duration-300"
+                        aria-label="Twitter"
                       >
                         <Twitter className="h-5 w-5" />
                       </a>
                       <a
-                        href="https://instagram.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                        href="#"
+                        className="w-10 h-10 rounded-full bg-trust-blue/10 hover:bg-trust-blue hover:text-white flex items-center justify-center text-trust-blue transition-all duration-300"
+                        aria-label="LinkedIn"
+                      >
+                        <Linkedin className="h-5 w-5" />
+                      </a>
+                      <a
+                        href="#"
+                        className="w-10 h-10 rounded-full bg-trust-blue/10 hover:bg-trust-blue hover:text-white flex items-center justify-center text-trust-blue transition-all duration-300"
+                        aria-label="Instagram"
                       >
                         <Instagram className="h-5 w-5" />
                       </a>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Map Placeholder */}
-                <Card className="border-2">
-                  <CardContent className="p-0">
-                    <div className="w-full h-64 bg-muted rounded-lg flex items-center justify-center">
-                      <div className="text-center space-y-2">
-                        <MapPin className="h-12 w-12 text-muted-foreground mx-auto" />
-                        <p className="text-muted-foreground">Map Location</p>
-                        <p className="text-sm text-muted-foreground">Equity Plaza, Ngara, Nairobi</p>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -266,6 +278,7 @@ const Contact = () => {
         </section>
       </main>
 
+      <ChatbotWidget />
       <Footer />
     </div>
   );
