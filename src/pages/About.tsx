@@ -4,17 +4,34 @@ import ImageCarousel from "@/components/ImageCarousel";
 import ChatbotWidget from "@/components/ChatbotWidget";
 import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Heart, Shield, Lightbulb, Users } from "lucide-react";
-import schoolBusRoad from "@/assets/school-bus-road.jpg";
-import kenyanChildren from "@/assets/kenyan-school-children.jpg";
-import childrenBoarding from "@/assets/children-boarding-bus.jpg";
-import heroImage from "@/assets/hero-school-bus.jpg";
+import busFleet from "@/assets/bus-fleet.jpg";
+import busFront from "@/assets/bus-front.jpg";
+import busDetail from "@/assets/bus-detail.jpg";
+import busLineup from "@/assets/bus-lineup.jpg";
+import busStreet from "@/assets/bus-street.jpg";
+import busSunset from "@/assets/bus-sunset.jpg";
+import busSchool from "@/assets/bus-school.jpg";
 
 const About = () => {
   const carouselSlides = [
-    { image: schoolBusRoad, caption: "Every Step Safe" },
-    { image: kenyanChildren, caption: "LittleSteps in Motion" },
-    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
-    { image: heroImage, caption: "Visibility for Every Journey" },
+    { 
+      image: busFleet, 
+      caption: "Our Commitment to Child Safety", 
+      description: "Serving schools and families across Kenya with advanced tracking technology.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busFront, 
+      caption: "Innovation in School Transport", 
+      description: "Combining GPS technology with intuitive design for complete visibility.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busSchool, 
+      caption: "Powered by Jendie Automobiles Ltd.", 
+      description: "Leading the way in school transport safety across Africa.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
   ];
 
   const values = [

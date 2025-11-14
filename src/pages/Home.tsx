@@ -9,9 +9,13 @@ import ChatbotWidget from "@/components/ChatbotWidget";
 import { MapPin, Bell, Shield, Lock, Eye, Users, CheckCircle, UserPlus, LogIn, Smartphone, BusFront } from "lucide-react";
 import heroImage from "@/assets/hero-school-bus.jpg";
 import nairobiSkyline from "@/assets/nairobi-skyline.jpg";
-import schoolBusRoad from "@/assets/school-bus-road.jpg";
-import kenyanChildren from "@/assets/kenyan-school-children.jpg";
-import childrenBoarding from "@/assets/children-boarding-bus.jpg";
+import busFleet from "@/assets/bus-fleet.jpg";
+import busFront from "@/assets/bus-front.jpg";
+import busDetail from "@/assets/bus-detail.jpg";
+import busLineup from "@/assets/bus-lineup.jpg";
+import busStreet from "@/assets/bus-street.jpg";
+import busSunset from "@/assets/bus-sunset.jpg";
+import busSchool from "@/assets/bus-school.jpg";
 
 const Home = () => {
   const features = [
@@ -48,10 +52,48 @@ const Home = () => {
   ];
 
   const carouselSlides = [
-    { image: schoolBusRoad, caption: "Every Step Safe" },
-    { image: kenyanChildren, caption: "LittleSteps in Motion" },
-    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
-    { image: heroImage, caption: "Visibility for Every Journey" },
+    { 
+      image: busFleet, 
+      caption: "Every Journey, Every Child, Fully Visible", 
+      description: "TrackMyKid ensures complete visibility for school transport across Nairobi and beyond.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busFront, 
+      caption: "LittleSteps in Motion", 
+      description: "Real-time tracking that brings peace of mind to parents and schools.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busDetail, 
+      caption: "Safety, Transparency, Trust", 
+      description: "Powered by Jendie Automobiles Ltd., serving Kenya's children with care.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busLineup, 
+      caption: "Trusted by Schools, Loved by Parents", 
+      description: "Join hundreds of families who trust TrackMyKid for safe school transport.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busStreet, 
+      caption: "Real-Time Visibility for Every Route", 
+      description: "Track onboarding, offboarding, and every moment in between.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busSunset, 
+      caption: "We Move with PURPOSE. We Protect with PRIDE.", 
+      description: "Advanced GPS tracking with intuitive design for complete peace of mind.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busSchool, 
+      caption: "Visibility for Every Journey", 
+      description: "From pickup to drop-off, we keep you connected to your child's journey.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
   ];
 
   const testimonials = [
@@ -147,7 +189,7 @@ const Home = () => {
             
             <div className="relative animate-float">
               <img 
-                src={schoolBusRoad} 
+                src={busSchool} 
                 alt="School bus on Kenyan road with safety tracking" 
                 className="rounded-3xl shadow-2xl w-full"
               />
@@ -498,7 +540,7 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="relative rounded-2xl overflow-hidden shadow-xl hover-lift">
               <img 
-                src={kenyanChildren} 
+                src={busDetail} 
                 alt="Happy Kenyan school children in uniforms" 
                 className="w-full h-[300px] object-cover"
               />
@@ -510,7 +552,7 @@ const Home = () => {
             </div>
             <div className="relative rounded-2xl overflow-hidden shadow-xl hover-lift">
               <img 
-                src={childrenBoarding} 
+                src={busStreet} 
                 alt="Children boarding school bus safely" 
                 className="w-full h-[300px] object-cover"
               />
