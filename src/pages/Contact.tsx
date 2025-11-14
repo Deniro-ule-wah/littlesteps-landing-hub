@@ -9,10 +9,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
-import schoolBusRoad from "@/assets/school-bus-road.jpg";
-import kenyanChildren from "@/assets/kenyan-school-children.jpg";
-import childrenBoarding from "@/assets/children-boarding-bus.jpg";
-import heroImage from "@/assets/hero-school-bus.jpg";
+import busFront from "@/assets/bus-front.jpg";
+import busSchool from "@/assets/bus-school.jpg";
+import busSunset from "@/assets/bus-sunset.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -25,10 +24,24 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const carouselSlides = [
-    { image: schoolBusRoad, caption: "Every Step Safe" },
-    { image: kenyanChildren, caption: "LittleSteps in Motion" },
-    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
-    { image: heroImage, caption: "Visibility for Every Journey" },
+    { 
+      image: busFront, 
+      caption: "We're Here to Help", 
+      description: "Reach our support team at Equity Plaza, Ngara, Nairobi.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busSchool, 
+      caption: "Connect with TrackMyKid", 
+      description: "Questions? Feedback? We're always ready to listen.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busSunset, 
+      caption: "Your Partner in Child Safety", 
+      description: "Contact us for support, inquiries, or to get started today.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {

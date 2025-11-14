@@ -4,17 +4,37 @@ import ImageCarousel from "@/components/ImageCarousel";
 import ChatbotWidget from "@/components/ChatbotWidget";
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Lock, Scale, Users, Shield, Baby } from "lucide-react";
-import schoolBusRoad from "@/assets/school-bus-road.jpg";
-import kenyanChildren from "@/assets/kenyan-school-children.jpg";
-import childrenBoarding from "@/assets/children-boarding-bus.jpg";
-import heroImage from "@/assets/hero-school-bus.jpg";
+import busDetail from "@/assets/bus-detail.jpg";
+import busLineup from "@/assets/bus-lineup.jpg";
+import busStreet from "@/assets/bus-street.jpg";
+import busSunset from "@/assets/bus-sunset.jpg";
 
 const Philosophy = () => {
   const carouselSlides = [
-    { image: schoolBusRoad, caption: "Every Step Safe" },
-    { image: kenyanChildren, caption: "LittleSteps in Motion" },
-    { image: childrenBoarding, caption: "Trusted by Schools, Loved by Parents" },
-    { image: heroImage, caption: "Visibility for Every Journey" },
+    { 
+      image: busDetail, 
+      caption: "We Move with PURPOSE", 
+      description: "Every feature we build prioritizes child safety and parental peace of mind.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busLineup, 
+      caption: "We Protect with PRIDE", 
+      description: "Bank-grade security protecting your family's data and your child's journey.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busStreet, 
+      caption: "We Serve with HEART", 
+      description: "Understanding the emotional weight of child safety for every parent.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
+    { 
+      image: busSunset, 
+      caption: "A Philosophy in Action", 
+      description: "Trust earned one journey at a time across Kenya's communities.",
+      location: "Nairobi • Ngara • Equity Plaza"
+    },
   ];
 
   const ethicalGuidelines = [
