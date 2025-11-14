@@ -16,6 +16,7 @@ import busLineup from "@/assets/bus-lineup.jpg";
 import busStreet from "@/assets/bus-street.jpg";
 import busSunset from "@/assets/bus-sunset.jpg";
 import busSchool from "@/assets/bus-school.jpg";
+import logoFull from "@/assets/trackmykid-logo-full.jpg";
 
 const Home = () => {
   const features = [
@@ -151,52 +152,47 @@ const Home = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight">
-                Every Journey. <span className="text-trust-blue">Seen.</span>{" "}
-                <span className="text-mustard">Safe.</span> Secure.
-              </h1>
-              <p className="text-2xl font-heading text-muted-foreground italic">
-                Karibu TrackMyKid
-              </p>
-              <p className="text-lg text-muted-foreground max-w-xl">
-                Empowering parents with peace of mind. Kenya's leading parental trust and safety brand ensuring transparency in school transport.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Button 
-                  size="xl"
-                  onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
-                  aria-label="Login to Portal"
-                  className="bg-orange hover:bg-orange/90 text-white transition-all hover:scale-105 rounded-full"
-                >
-                  Track My Child
-                </Button>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  size="xl" 
-                  className="border-2 border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white rounded-full"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  <a href="#features-section">Learn More</a>
-                </Button>
-              </div>
-            </div>
-            
-            <div className="relative animate-float">
-              <img 
-                src={busSchool} 
-                alt="School bus on Kenyan road with safety tracking" 
-                className="rounded-3xl shadow-2xl w-full"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground p-6 rounded-2xl shadow-xl">
-                <p className="text-3xl font-bold">1000+</p>
-                <p className="text-sm">Happy Families</p>
-              </div>
+          {/* Logo at top left */}
+          <div className="mb-8 animate-fade-in">
+            <img 
+              src={logoFull} 
+              alt="TrackMyKid - LittleSteps in Motion" 
+              className="h-16 md:h-20 w-auto"
+            />
+          </div>
+          
+          <div className="max-w-3xl space-y-6 animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight">
+              Every Journey. <span className="text-trust-blue">Seen.</span>{" "}
+              <span className="text-mustard">Safe.</span> Secure.
+            </h1>
+            <p className="text-2xl font-heading text-muted-foreground italic">
+              Karibu TrackMyKid
+            </p>
+            <p className="text-lg text-muted-foreground max-w-xl">
+              Empowering parents with peace of mind. Kenya's leading parental trust and safety brand ensuring transparency in school transport.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button 
+                size="xl"
+                onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
+                aria-label="Login to Portal"
+                className="bg-orange hover:bg-orange/90 text-white transition-all hover:scale-105 rounded-full"
+              >
+                Track My Child
+              </Button>
+              <Button 
+                asChild 
+                variant="outline" 
+                size="xl" 
+                className="border-2 border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white rounded-full"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                <a href="#features-section">Learn More</a>
+              </Button>
             </div>
           </div>
         </div>
