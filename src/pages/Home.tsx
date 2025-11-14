@@ -140,36 +140,35 @@ const Home = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-gradient-to-br from-background via-soft-bg to-primary/5">
-        {/* Nairobi Skyline Background */}
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <img 
-            src={nairobiSkyline} 
-            alt="" 
-            className="w-full h-full object-cover"
-          />
+      {/* Hero Section with Background Carousel */}
+      <section className="relative pt-16 min-h-screen flex items-center overflow-hidden">
+        {/* Full-screen Background Carousel */}
+        <div className="absolute inset-0 z-0">
+          <ImageCarousel slides={carouselSlides} />
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/40 z-[1]" />
+        
+        <div className="container mx-auto px-4 relative z-10 py-16">
           {/* Logo at top left */}
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-12 animate-fade-in">
             <img 
               src={logoFull} 
               alt="TrackMyKid - LittleSteps in Motion" 
-              className="h-16 md:h-20 w-auto"
+              className="h-16 md:h-20 w-auto drop-shadow-2xl"
             />
           </div>
           
           <div className="max-w-3xl space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground leading-tight">
-              Every Journey. <span className="text-trust-blue">Seen.</span>{" "}
-              <span className="text-mustard">Safe.</span> Secure.
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight drop-shadow-lg">
+              Every Journey. <span className="text-trust-blue drop-shadow-lg">Seen.</span>{" "}
+              <span className="text-mustard drop-shadow-lg">Safe.</span> Secure.
             </h1>
-            <p className="text-2xl font-heading text-muted-foreground italic">
+            <p className="text-2xl font-heading text-white/90 italic drop-shadow-md">
               Karibu TrackMyKid
             </p>
-            <p className="text-lg text-muted-foreground max-w-xl">
+            <p className="text-lg text-white/80 max-w-xl drop-shadow-md">
               Empowering parents with peace of mind. Kenya's leading parental trust and safety brand ensuring transparency in school transport.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -177,7 +176,7 @@ const Home = () => {
                 size="xl"
                 onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
                 aria-label="Login to Portal"
-                className="bg-orange hover:bg-orange/90 text-white transition-all hover:scale-105 rounded-full"
+                className="bg-orange hover:bg-orange/90 text-white transition-all hover:scale-105 rounded-full shadow-xl"
               >
                 Track My Child
               </Button>
@@ -185,7 +184,7 @@ const Home = () => {
                 asChild 
                 variant="outline" 
                 size="xl" 
-                className="border-2 border-trust-blue text-trust-blue hover:bg-trust-blue hover:text-white rounded-full"
+                className="border-2 border-white text-white hover:bg-white hover:text-orange rounded-full shadow-xl backdrop-blur-sm"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' });
@@ -194,23 +193,6 @@ const Home = () => {
                 <a href="#features-section">Learn More</a>
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Image Carousel Section */}
-      <section className="py-16 md:py-20 bg-soft-bg">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-              Safety in <span className="text-gradient-mustard">Every Journey</span>
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Trusted by families and schools across Kenya
-            </p>
-          </div>
-          <div className="max-w-5xl mx-auto">
-            <ImageCarousel slides={carouselSlides} />
           </div>
         </div>
       </section>

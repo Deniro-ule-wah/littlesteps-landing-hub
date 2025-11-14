@@ -57,26 +57,25 @@ const Philosophy = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       
-      <main className="flex-1 pt-16">
-        {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-br from-background via-soft-bg to-trust-blue/5">
-          <div className="container mx-auto px-4">
+      <main className="flex-1">
+        {/* Hero Section with Background Carousel */}
+        <section className="relative pt-16 min-h-[80vh] flex items-center overflow-hidden">
+          {/* Full-screen Background Carousel */}
+          <div className="absolute inset-0 z-0">
+            <ImageCarousel slides={carouselSlides} />
+          </div>
+          
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40 z-[1]" />
+          
+          <div className="container mx-auto px-4 relative z-10 py-16">
             <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground">
-                Our <span className="text-gradient-blue">Philosophy</span>
+              <h1 className="text-4xl md:text-5xl font-heading font-bold text-white drop-shadow-lg">
+                Our <span className="text-trust-blue drop-shadow-lg">Philosophy</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
+              <p className="text-xl text-white/90 leading-relaxed drop-shadow-md">
                 The values, principles, and beliefs that guide our mission to protect every child
               </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Image Carousel Section */}
-        <section className="py-16 md:py-20 bg-soft-bg">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <ImageCarousel slides={carouselSlides} />
             </div>
           </div>
         </section>
