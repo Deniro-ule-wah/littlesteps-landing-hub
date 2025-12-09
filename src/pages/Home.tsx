@@ -101,38 +101,58 @@ const Home = () => {
     {
       name: "Akinyi Odhiambo",
       role: "Parent - Nairobi",
-      content: "Mtoto wangu yuko salama kila siku. Asante TrackMyKid!",
+      content: "Nina amani sasa — naona safari ya mtoto wangu kila siku. TrackMyKid ni baraka!",
       school: "Makini School",
+      avatar: "AO"
     },
     {
       name: "James Mwangi",
       role: "Parent - Kiambu",
-      content: "Nimefurahia huduma hii. I can see my child's bus in real time.",
+      content: "Nimefurahia huduma hii. I can see my child's bus in real time. Very reliable!",
       school: "Braeburn School",
+      avatar: "JM"
     },
     {
       name: "Hassan Abdalla",
       role: "Parent - Mombasa",
-      content: "The alerts give me peace of mind every morning.",
+      content: "The alerts give me peace of mind every morning. I know exactly when my son boards.",
       school: "Aga Khan Academy",
+      avatar: "HA"
     },
     {
       name: "Wanjiku Kariuki",
-      role: "Teacher - Nairobi",
-      content: "As a teacher, this system brings order and safety to our school transport.",
+      role: "School Admin - Nairobi",
+      content: "As a school admin, this system brings order and safety to our transport. Shukrani sana!",
       school: "Brookhouse School",
+      avatar: "WK"
     },
     {
       name: "Nyambura Njeri",
       role: "Parent - Nakuru",
-      content: "Simple to use, very clear and accurate.",
+      content: "Simple to use, very clear and accurate. My children are safe every day.",
       school: "Pembroke House",
+      avatar: "NN"
     },
     {
       name: "David Otieno",
       role: "Transport Coordinator - Nairobi",
-      content: "Efficiency has improved dramatically since we started using TrackMyKid.",
+      content: "Efficiency has improved dramatically. Parents are happy, drivers are accountable.",
       school: "St. Mary's School",
+      avatar: "DO"
+    },
+    {
+      name: "Fatuma Ahmed",
+      role: "Parent - Nairobi",
+      content: "Watoto wangu wawili wanasafiri salama. The notifications are instant!",
+      school: "Riara Group of Schools",
+      avatar: "FA"
+    },
+    {
+      name: "Peter Kamau",
+      role: "Bus Driver - Kiambu",
+      content: "The app helps me stay on route and parents trust me more. Very good system.",
+      school: "Hillcrest School",
+      avatar: "PK"
     },
   ];
 
@@ -542,15 +562,22 @@ const Home = () => {
             </div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="bg-card border-2 hover:shadow-lg transition-all duration-300 hover-lift">
                 <CardContent className="p-6 space-y-4">
-                  <p className="text-muted-foreground italic">"{testimonial.content}"</p>
-                  <div className="pt-4 border-t">
-                    <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    <p className="text-xs text-trust-blue font-medium mt-1">{testimonial.school}</p>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-12 h-12 rounded-full bg-trust-blue text-white flex items-center justify-center font-bold text-lg">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                    </div>
+                  </div>
+                  <p className="text-muted-foreground italic text-sm">"{testimonial.content}"</p>
+                  <div className="pt-3 border-t">
+                    <p className="text-xs text-trust-blue font-medium">{testimonial.school}</p>
                   </div>
                 </CardContent>
               </Card>
