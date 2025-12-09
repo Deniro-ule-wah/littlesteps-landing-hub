@@ -49,21 +49,21 @@ const About = () => {
       
       <main className="flex-1">
         {/* Hero Section with Background Carousel */}
-        <section className="relative pt-16 min-h-[80vh] flex items-center overflow-hidden">
+        <section className="relative pt-16 min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
           {/* Full-screen Background Carousel */}
           <div className="absolute inset-0 z-0">
             <ImageCarousel slides={carouselSlides} />
           </div>
           
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/40 z-[1]" />
+          <div className="absolute inset-0 bg-black/50 z-[1]" />
           
-          <div className="container mx-auto px-4 relative z-10 py-16">
-            <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-heading font-bold text-white drop-shadow-lg">
+          <div className="container mx-auto px-4 relative z-10 py-8 md:py-16">
+            <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6 animate-fade-in">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-white drop-shadow-lg">
                 About <span className="text-mustard drop-shadow-lg">TrackMyKid</span>
               </h1>
-              <p className="text-xl text-white/90 leading-relaxed drop-shadow-md">
+              <p className="text-base md:text-xl text-white/90 leading-relaxed drop-shadow-md px-2">
                 We are on a mission to revolutionize school transport safety through technology, 
                 transparency, and unwavering commitment to child welfare.
               </p>

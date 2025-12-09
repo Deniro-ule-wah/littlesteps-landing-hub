@@ -32,7 +32,7 @@ const Navigation = () => {
             <div className="h-8 w-px bg-border mx-2 hidden sm:block" />
             <div className="flex flex-col items-center hidden sm:flex">
               <span className="text-xs font-semibold text-trust-blue">Powered by</span>
-              <span className="text-sm font-heading font-bold text-mustard">Jendie Automobiles</span>
+              <span className="text-sm font-heading font-bold text-destructive">Jendie Automobiles</span>
             </div>
           </Link>
 
