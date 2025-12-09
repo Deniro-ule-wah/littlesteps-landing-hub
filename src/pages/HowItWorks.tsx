@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ImageCarousel from "@/components/ImageCarousel";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import { 
   MapPin, Bell, Shield, AlertTriangle, Star, Users, 
   Smartphone, Bus, Clock, CheckCircle, Navigation2, 
@@ -76,18 +77,18 @@ const HowItWorks = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative pt-16 min-h-[70vh] flex items-center overflow-hidden">
+      <section className="relative pt-16 min-h-[60vh] md:min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ImageCarousel slides={carouselSlides} />
         </div>
         <div className="absolute inset-0 bg-black/50 z-[1]" />
         
-        <div className="container mx-auto px-4 relative z-10 py-16">
-          <div className="max-w-3xl space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight drop-shadow-lg">
+        <div className="container mx-auto px-4 relative z-10 py-8 md:py-16">
+          <div className="max-w-3xl space-y-4 md:space-y-6 animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight drop-shadow-lg">
               How <span className="text-mustard">TrackMyKid</span> Works
             </h1>
-            <p className="text-xl text-white/90 max-w-xl drop-shadow-md">
+            <p className="text-base md:text-xl text-white/90 max-w-xl drop-shadow-md">
               Explore our interactive simulations and see how we keep every child safe on their school journey
             </p>
           </div>
@@ -313,6 +314,7 @@ const HowItWorks = () => {
         </div>
       </section>
 
+      <ChatbotWidget />
       <Footer />
     </div>
   );
