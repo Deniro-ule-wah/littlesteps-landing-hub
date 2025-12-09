@@ -159,4 +159,32 @@ All colors MUST be HSL.
       transform: translateY(-10px);
     }
   }
+  
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-50px);
+    }
+    50% {
+      transform: translateX(calc(100vw - 100px));
+    }
+    100% {
+      transform: translateX(-50px);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
 }
