@@ -202,9 +202,8 @@ const Home = () => {
               </Button>
               <Button 
                 asChild 
-                variant="outline" 
                 size="lg" 
-                className="border-2 border-white text-white hover:bg-white hover:text-orange rounded-full shadow-xl backdrop-blur-sm w-full sm:w-auto"
+                className="bg-trust-blue hover:bg-trust-blue/90 text-white rounded-full shadow-xl w-full sm:w-auto"
                 onClick={(e) => {
                   e.preventDefault();
                   document.getElementById('features-section')?.scrollIntoView({ behavior: 'smooth' });
