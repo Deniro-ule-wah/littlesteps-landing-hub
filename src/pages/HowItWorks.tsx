@@ -24,9 +24,9 @@ const HowItWorks = () => {
   const [activeSimulation, setActiveSimulation] = useState<string | null>(null);
 
   const carouselSlides = [
-    { image: busFleet, caption: "How TrackMyKid Works", description: "Simple steps to keep your child safe", location: "Nairobi • Kenya" },
-    { image: busFront, caption: "Real-Time Tracking", description: "GPS visibility for every journey", location: "Nairobi • Kenya" },
-    { image: busDetail, caption: "Instant Notifications", description: "Stay connected at every step", location: "Nairobi • Kenya" },
+    { image: busFleet, caption: "How TrackMyKid Works", description: "Simple steps to keep your child safe", location: "Kampala • Uganda" },
+    { image: busFront, caption: "Real-Time Tracking", description: "GPS visibility for every journey", location: "Kampala • Uganda" },
+    { image: busDetail, caption: "Instant Notifications", description: "Stay connected at every step", location: "Kampala • Uganda" },
   ];
 
   const simulationData = {
@@ -152,7 +152,7 @@ const HowItWorks = () => {
                     <div className="relative z-10 text-center">
                       <MapPin className="h-16 w-16 text-trust-blue mx-auto animate-bounce" />
                       <p className="text-muted-foreground mt-2 font-medium">Live GPS Tracking Active</p>
-                      <p className="text-sm text-muted-foreground">Nairobi • Ngara Route</p>
+                      <p className="text-sm text-muted-foreground">Kampala • Nakasero Route</p>
                     </div>
                     
                     {/* Animated Bus Icon */}
@@ -292,7 +292,7 @@ const HowItWorks = () => {
             Ready to Get Started?
           </h2>
           <p className="text-lg text-secondary-foreground/90 max-w-2xl mx-auto">
-            Join thousands of Kenyan families who trust TrackMyKid
+            Join thousands of Ugandan families who trust TrackMyKid
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 

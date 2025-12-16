@@ -57,11 +57,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-sm text-secondary-foreground/80">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>info@trackmykid.co.ke</span>
+                <span>info@trackmykid.co.ug</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-secondary-foreground/80">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Equity Plaza, 3rd Floor, Ngara, Nairobi</span>
+                <span>Nakasero Road, Plot 45, Kampala, Uganda</span>
               </li>
             </ul>
           </div>

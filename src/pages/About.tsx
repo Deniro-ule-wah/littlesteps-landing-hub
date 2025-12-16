@@ -17,20 +17,20 @@ const About = () => {
     { 
       image: busFleet, 
       caption: "Our Commitment to Child Safety", 
-      description: "Serving schools and families across Kenya with advanced tracking technology.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      description: "Serving schools and families across Uganda with advanced tracking technology.",
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busFront, 
       caption: "Innovation in School Transport", 
       description: "Combining GPS technology with intuitive design for complete visibility.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busSchool, 
       caption: "Powered by Jendie Automobiles Ltd.", 
       description: "Leading the way in school transport safety across Africa.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
   ];
 
@@ -171,7 +171,7 @@ const About = () => {
                   <p className="text-lg text-muted-foreground leading-relaxed text-center">
                     We are committed to continuous improvement, listening to our users, and 
                     adapting our services to meet the evolving needs of families and educational 
-                    institutions across Kenya and beyond.
+                    institutions across Uganda and beyond.
                   </p>
                 </CardContent>
               </Card>

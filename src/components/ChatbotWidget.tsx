@@ -69,7 +69,7 @@ const ChatbotWidget = () => {
           <CardContent className="p-6 space-y-4">
             <div className="bg-soft-bg rounded-xl p-4 mb-4">
               <p className="text-foreground font-medium">
-                Karibu! 👋 How can we assist you today?
+                Tukwaniriza! 👋 How can we assist you today?
               </p>
             </div>
 

@@ -56,102 +56,102 @@ const Home = () => {
     { 
       image: busFleet, 
       caption: "Every Journey, Every Child, Fully Visible", 
-      description: "TrackMyKid ensures complete visibility for school transport across Nairobi and beyond.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      description: "TrackMyKid ensures complete visibility for school transport across Kampala and beyond.",
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busFront, 
       caption: "LittleSteps in Motion", 
       description: "Real-time tracking that brings peace of mind to parents and schools.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busDetail, 
       caption: "Safety, Transparency, Trust", 
-      description: "Powered by Jendie Automobiles Ltd., serving Kenya's children with care.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      description: "Powered by Jendie Automobiles Ltd., serving Uganda's children with care.",
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busLineup, 
       caption: "Trusted by Schools, Loved by Parents", 
       description: "Join hundreds of families who trust TrackMyKid for safe school transport.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busStreet, 
       caption: "Real-Time Visibility for Every Route", 
       description: "Track onboarding, offboarding, and every moment in between.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busSunset, 
       caption: "We Move with PURPOSE. We Protect with PRIDE.", 
       description: "Advanced GPS tracking with intuitive design for complete peace of mind.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busSchool, 
       caption: "Visibility for Every Journey", 
       description: "From pickup to drop-off, we keep you connected to your child's journey.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
   ];
 
   const testimonials = [
     {
-      name: "Akinyi Odhiambo",
-      role: "Parent - Nairobi",
-      content: "Nina amani sasa — naona safari ya mtoto wangu kila siku. TrackMyKid ni baraka!",
-      school: "Makini School",
-      avatar: "AO"
+      name: "Nakato Ssemanda",
+      role: "Parent - Kampala",
+      content: "Sirina kwewuubaala — ndaba olugendo lwa mwana wange buli lunaku. TrackMyKid ye mukisa!",
+      school: "Kampala International School",
+      avatar: "NS"
     },
     {
-      name: "James Mwangi",
-      role: "Parent - Kiambu",
-      content: "Nimefurahia huduma hii. I can see my child's bus in real time. Very reliable!",
-      school: "Braeburn School",
+      name: "James Mugisha",
+      role: "Parent - Wakiso",
+      content: "I can see my child's bus in real time. Very reliable service!",
+      school: "Greenhill Academy",
       avatar: "JM"
     },
     {
-      name: "Hassan Abdalla",
-      role: "Parent - Mombasa",
+      name: "Hassan Katongole",
+      role: "Parent - Entebbe",
       content: "The alerts give me peace of mind every morning. I know exactly when my son boards.",
-      school: "Aga Khan Academy",
-      avatar: "HA"
+      school: "Aga Khan Primary School",
+      avatar: "HK"
     },
     {
-      name: "Wanjiku Kariuki",
-      role: "School Admin - Nairobi",
-      content: "As a school admin, this system brings order and safety to our transport. Shukrani sana!",
-      school: "Brookhouse School",
-      avatar: "WK"
+      name: "Grace Nambi",
+      role: "School Admin - Kampala",
+      content: "As a school admin, this system brings order and safety to our transport. Webale nnyo!",
+      school: "Kabojja Junior School",
+      avatar: "GN"
     },
     {
-      name: "Nyambura Njeri",
-      role: "Parent - Nakuru",
+      name: "Sarah Namutebi",
+      role: "Parent - Mukono",
       content: "Simple to use, very clear and accurate. My children are safe every day.",
-      school: "Pembroke House",
-      avatar: "NN"
+      school: "King's College Budo",
+      avatar: "SN"
     },
     {
-      name: "David Otieno",
-      role: "Transport Coordinator - Nairobi",
+      name: "David Okello",
+      role: "Transport Coordinator - Kampala",
       content: "Efficiency has improved dramatically. Parents are happy, drivers are accountable.",
-      school: "St. Mary's School",
+      school: "Buganda Road Primary",
       avatar: "DO"
     },
     {
-      name: "Fatuma Ahmed",
-      role: "Parent - Nairobi",
-      content: "Watoto wangu wawili wanasafiri salama. The notifications are instant!",
-      school: "Riara Group of Schools",
-      avatar: "FA"
+      name: "Fatima Nalwanga",
+      role: "Parent - Kampala",
+      content: "Abaana bange babiri batambula bulungi. The notifications are instant!",
+      school: "Rainbow International",
+      avatar: "FN"
     },
     {
-      name: "Peter Kamau",
-      role: "Bus Driver - Kiambu",
+      name: "Peter Kato",
+      role: "Bus Driver - Wakiso",
       content: "The app helps me stay on route and parents trust me more. Very good system.",
-      school: "Hillcrest School",
+      school: "Hillside Primary School",
       avatar: "PK"
     },
   ];
@@ -186,10 +186,10 @@ const Home = () => {
               <span className="text-mustard drop-shadow-lg">Safe.</span> Secure.
             </h1>
             <p className="text-xl md:text-2xl font-heading text-white/90 italic drop-shadow-md">
-              Karibu TrackMyKid
+              Tukwaniriza TrackMyKid
             </p>
             <p className="text-base md:text-lg text-white/80 max-w-xl drop-shadow-md">
-              Empowering parents with peace of mind. Kenya's leading parental trust and safety brand ensuring transparency in school transport.
+              Empowering parents with peace of mind. Uganda's leading parental trust and safety brand ensuring transparency in school transport.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
               <Button 
@@ -224,7 +224,7 @@ const Home = () => {
               Why Parents Trust <span className="text-gradient-mustard">TrackMyKid</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Kenya's leading solution ensuring transparency, safety, and visibility in school transport
+              Uganda's leading solution ensuring transparency, safety, and visibility in school transport
             </p>
           </div>
           
@@ -334,7 +334,7 @@ const Home = () => {
               Simple, <span className="text-gradient-mustard">Transparent</span> Pricing
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Affordable safety for every family in Kenya
+              Affordable safety for every family in Uganda
             </p>
           </div>
 
@@ -360,8 +360,8 @@ const Home = () => {
                   </h3>
                   <p className="text-xs text-muted-foreground mb-3">One-time setup</p>
                   <div className="space-y-1">
-                    <p className="text-4xl font-bold text-trust-blue">16,000</p>
-                    <p className="text-xs text-muted-foreground">KES per vehicle</p>
+                    <p className="text-4xl font-bold text-trust-blue">1,600,000</p>
+                    <p className="text-xs text-muted-foreground">UGX per vehicle</p>
                   </div>
                 </div>
                 <div className="space-y-2 pt-3 border-t">
@@ -394,8 +394,8 @@ const Home = () => {
                   </h3>
                   <p className="text-xs text-muted-foreground mb-3">Annual device fee</p>
                   <div className="space-y-1">
-                    <p className="text-4xl font-bold text-trust-blue border-b-4 border-orange inline-block">7,000</p>
-                    <p className="text-xs text-muted-foreground">KES per year</p>
+                    <p className="text-4xl font-bold text-trust-blue border-b-4 border-orange inline-block">700,000</p>
+                    <p className="text-xs text-muted-foreground">UGX per year</p>
                   </div>
                 </div>
                 <div className="space-y-2 pt-3 border-t">
@@ -431,8 +431,8 @@ const Home = () => {
                   </h3>
                   <p className="text-xs text-muted-foreground mb-3">Per school term</p>
                   <div className="space-y-1">
-                    <p className="text-4xl font-bold text-mustard">3,000</p>
-                    <p className="text-xs text-muted-foreground">KES per child</p>
+                    <p className="text-4xl font-bold text-mustard">300,000</p>
+                    <p className="text-xs text-muted-foreground">UGX per child</p>
                   </div>
                 </div>
                 <div className="space-y-2 pt-3 border-t">
@@ -472,11 +472,11 @@ const Home = () => {
                   </h3>
                   <p className="text-xs text-muted-foreground mb-3">Full year value</p>
                   <div className="space-y-1">
-                    <p className="text-4xl font-bold text-secondary">9,000</p>
-                    <p className="text-xs text-muted-foreground">KES per child</p>
+                    <p className="text-4xl font-bold text-secondary">900,000</p>
+                    <p className="text-xs text-muted-foreground">UGX per child</p>
                   </div>
                   <p className="text-xs text-secondary font-semibold mt-2">
-                    Save 3,000 KES!
+                    Save 300,000 UGX!
                   </p>
                 </div>
                 <div className="space-y-2 pt-3 border-t">
@@ -509,6 +509,9 @@ const Home = () => {
             <p className="text-muted-foreground mb-4">
               All plans include full access to our tracking platform with no hidden fees
             </p>
+            <p className="text-xs text-muted-foreground mb-4">
+              Prices shown in UGX. Final pricing subject to school agreements.
+            </p>
             <Button 
               size="xl"
               onClick={() => window.location.href = 'https://trackmykid-webapp.vercel.app/'}
@@ -526,7 +529,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 space-y-4">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
-              Trusted by Schools & Parents Across Kenya
+              Trusted by Schools & Parents Across Uganda
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               See what our community has to say about TrackMyKid
@@ -538,12 +541,12 @@ const Home = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-xl hover-lift">
               <img 
                 src={busDetail} 
-                alt="Happy Kenyan school children in uniforms" 
+                alt="Happy Ugandan school children in uniforms" 
                 className="w-full h-[300px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                 <p className="text-white font-heading font-semibold text-xl">
-                  Serving Students from Leading Kenyan Schools
+                  Serving Students from Leading Ugandan Schools
                 </p>
               </div>
             </div>
