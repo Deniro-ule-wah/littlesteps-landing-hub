@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -54,8 +54,15 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Login Button */}
-          <div className="hidden md:block">
+          {/* Phone & Login Button */}
+          <div className="hidden md:flex items-center gap-4">
+            <a 
+              href="tel:0707152322" 
+              className="flex items-center gap-2 text-sm font-medium text-destructive hover:text-destructive/80 transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              0707 152 322
+            </a>
             <Button 
               variant="trustButton" 
               size="default"
@@ -95,6 +102,13 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
+            <a 
+              href="tel:0707152322" 
+              className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-medium text-destructive hover:bg-muted transition-all"
+            >
+              <Phone className="h-4 w-4" />
+              Call: 0707 152 322
+            </a>
             <Button 
               variant="trustButton" 
               size="default" 
