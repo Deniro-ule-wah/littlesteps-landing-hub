@@ -27,20 +27,20 @@ const Contact = () => {
     { 
       image: busFront, 
       caption: "We're Here to Help", 
-      description: "Reach our support team at Equity Plaza, Ngara, Nairobi.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      description: "Reach our support team at Nakasero, Kampala.",
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busSchool, 
       caption: "Connect with TrackMyKid", 
       description: "Questions? Feedback? We're always ready to listen.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
     { 
       image: busSunset, 
       caption: "Your Partner in Child Safety", 
       description: "Contact us for support, inquiries, or to get started today.",
-      location: "Nairobi • Ngara • Equity Plaza"
+      location: "Kampala • Nakasero • Uganda"
     },
   ];
 
@@ -145,7 +145,7 @@ const Contact = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+254 712 345 678"
+                        placeholder="+256 700 123 456"
                         className="rounded-xl"
                       />
                     </div>
@@ -189,8 +189,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-heading font-bold text-foreground mb-2">Office Location</h3>
                         <p className="text-muted-foreground">
-                          Equity Plaza, Ngara<br />
-                          Nairobi, Kenya
+                          Nakasero Road, Plot 45<br />
+                          Kampala, Uganda
                         </p>
                       </div>
                     </div>
@@ -206,8 +206,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-heading font-bold text-foreground mb-2">Email</h3>
                         <p className="text-muted-foreground">
-                          <a href="mailto:support@trackmykid.co.ke" className="hover:text-orange transition-colors">
-                            support@trackmykid.co.ke
+                          <a href="mailto:support@trackmykid.co.ug" className="hover:text-orange transition-colors">
+                            support@trackmykid.co.ug
                           </a>
                         </p>
                       </div>
